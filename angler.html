@@ -4,12 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Angler Profiles — Kayak Tourney Stats</title>
+  <base href="https://joshgoforth2011.github.io/kayak-tourney-stats/">
   <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
   <header>
     <h1>Angler Profiles</h1>
-    <nav><a href="./">Events</a> · <a href="./season.html">Season</a> · <a href="./angler.html">Anglers</a></nav>
+    <nav>
+      <a href="./">Events</a> ·
+      <a href="season.html">Season</a> ·
+      <a href="angler.html" class="active">Anglers</a>
+    </nav>
   </header>
 
   <main>
@@ -21,8 +26,7 @@
   </main>
 
   <script>
-    // Optional angler-specific deep-linking:
-    // Example: /angler.html?angler=Levi%20Schneider
+    // Optional deep link: /angler.html?angler=Levi%20Schneider
     const params = new URLSearchParams(location.search);
     const angler = params.get("angler");
     if (angler) {
