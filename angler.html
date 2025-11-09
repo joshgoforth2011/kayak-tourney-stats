@@ -3,38 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Angler Profiles — Kayak Tourney Stats</title>
+  <title>👤 Angler Profiles — Kayak Tourney Stats</title>
   <base href="https://joshgoforth2011.github.io/kayak-tourney-stats/">
   <link rel="stylesheet" href="./site.css" />
-  <style>
-   <link rel="stylesheet" href="./site.css" />
-
 </head>
 
 <body>
-  <!-- 🌊 Top Navigation -->
+  <!-- 🌊 Navigation -->
   <nav class="main-nav">
-    <a href="index.html">🏠 Home</a> |
-    <a href="events.html">🏁 Event Overviews</a> |
-    <a href="angler.html">👤 Angler Profiles</a> |
+    <a href="index.html">🏠 Home</a>
+    <a href="events.html">🏁 Event Overviews</a>
+    <a href="angler.html" class="active">👤 Angler Profiles</a>
     <a href="season.html">🏆 Season Totals</a>
   </nav>
 
-  <!-- 📊 Angler Profiles Embed -->
+  <!-- 📊 Angler Profile Embed -->
   <main>
     <div class="card">
       <iframe
         class="frame"
         id="anglerFrame"
         src="https://lookerstudio.google.com/embed/reporting/a7c080ab-2e98-4b38-b5a4-fbc2ec7711ec/page/p_twglk3eixd?rm=minimal&nav=hidden"
-        loading="lazy"
-        allowfullscreen>
+        allowfullscreen
+        loading="lazy">
       </iframe>
     </div>
   </main>
 
   <script>
-    // Optional deep link: /angler.html?angler=Levi%20Schneider
+    // Optional deep link: ?angler=Name
     const params = new URLSearchParams(location.search);
     const angler = params.get("angler");
     if (angler) {
@@ -44,5 +41,3 @@
   </script>
 </body>
 </html>
-
-
