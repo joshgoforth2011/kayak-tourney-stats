@@ -23,7 +23,7 @@ body {
   gap: 1rem;                   /* spacing between links */
   background-color: #111;
   padding: 1rem 1.5rem;
-  font-size: 1.25rem;          /* 🔹 larger font */
+  font-size: 1.25rem;          /* larger nav font */
   border-bottom: 1px solid #222;
   position: sticky;
   top: 0;
@@ -44,7 +44,7 @@ body {
 }
 
 .main-nav a.active {
-  color: #ffd166;              /* gold highlight for active link */
+  color: #ffd166;
   font-weight: 600;
 }
 
@@ -53,30 +53,38 @@ main {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 0;
   margin: 0;
-  min-height: calc(100vh - 80px); /* subtract nav height */
 }
 
 /* === CONTAINER (CARD) === */
 .card {
   width: 100%;
   max-width: 100%;
-  padding: 0;
   margin: 0 auto;
   background: none;
   border: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-bottom: 2rem;
 }
 
-/* === LOOKER EMBEDS === */
-.frame, iframe {
+/* === LOOKER EMBEDS (Auto-sized) === */
+.frame,
+iframe {
   width: 100%;
-  height: 93vh;  /* nearly full viewport */
+  height: auto;              /* 🔹 Allow natural height */
+  min-height: 800px;         /* baseline for short dashboards */
   border: none;
   display: block;
   background: #0b0f14;
+}
+
+/* === HEADINGS (optional if used later) === */
+h1, h2, h3 {
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 600;
 }
