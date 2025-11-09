@@ -61,7 +61,7 @@ main {
 /* === CONTAINER (CARD) === */
 .card {
   width: 100%;
-  max-width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   background: none;
   border: none;
@@ -69,6 +69,39 @@ main {
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 2rem;
+}
+
+/* Landing page card */
+.landing-card {
+  text-align: center;
+}
+
+.landing-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Button-style links */
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: #111827;
+  color: #ffffff;
+  border: 1px solid #374151;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.15s ease;
+}
+
+.button:hover {
+  background: #1f2937;
+  color: #ffd166;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
 
 /* === LOOKER EMBEDS (Auto-sized) === */

@@ -1,0 +1,33 @@
+Metric Explanation
+
+Performance Index
+
+📈 Interpretation
+
+900+ → Dominant (wins multiple events)
+
+700–850 → Elite consistency
+
+500–700 → Solid mid-pack with frequent top-10s
+
+300–500 → Occasional high finish or low participation
+
+<300 → Low placement or limited events
+
+⚙️ Explanation by Component
+| Component                               | Weight | Meaning                           | Why it matters                                                        |
+| --------------------------------------- | ------ | --------------------------------- | --------------------------------------------------------------------- |
+| `(season_total_length_in / 1200) * 400` | 40%    | Total inches caught across season | A full, productive season (e.g. 1200 inches total) earns full 400 pts |
+| `((100 - avg_finish) / 100) * 400`      | 40%    | Finishing consistency             | Lower average finish → higher normalized score                        |
+| `(best_big_bass_in / 25) * 200`         | 20%    | Big-fish factor                   | A 25" bass earns the full 200 pts bonus                               |
+
+
+
+Metrics to add: Classic Appearances
+Career wins
+Total Tournaments
+2nd Place Finishes
+
+
+
+
