@@ -1,47 +1,78 @@
-:root {
-  --bg: #0b0f14;
-  --card: #0f141a;
-  --fg: #e6edf3;
-  --accent: #9bd1ff;
-}
-
-html, body {
+/* === GLOBAL STYLES === */
+body {
   margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+  background-color: #0b0f14;
+  color: #ffffff;
+  font-family: "Segoe UI", Roboto, sans-serif;
 }
 
-header, nav, main {
-  max-width: 1200px;
-  margin: auto;
-  padding: 16px;
+/* === NAVIGATION BAR === */
+.main-nav {
+  display: flex;
+  justify-content: center;     /* center horizontally */
+  align-items: center;         /* center vertically */
+  flex-wrap: wrap;             /* prevents overflow on mobile */
+  background-color: #121212;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #222;
+  gap: 1rem;                   /* even spacing between links */
 }
 
+.main-nav a {
+  color: #8ab4f8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #cdd9e5;
+}
+
+.main-nav .active {
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 2px solid #8ab4f8;
+}
+
+/* === CONTENT WRAPPER === */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+/* === CARD CONTAINER === */
 .card {
-  background: var(--card);
-  border: 1px solid #171d24;
-  border-radius: 14px;
-  padding: 0;
-  overflow: hidden;
+  background: #1e1e1e;
+  margin: 2rem auto;
+  max-width: 95%;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
+/* === EMBEDDED FRAME === */
 .frame {
   width: 100%;
-  height: 1600px;
-  border: 0;
-  background: var(--bg);
+  height: 85vh;
+  border: none;
+  border-radius: 8px;
+  display: block;
+  background: #0b0f14;
 }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-  margin-right: 8px;
-}
-a:hover {
-  text-decoration: underline;
-}
-
+/* === RESPONSIVE ADJUSTMENTS === */
 @media (max-width: 768px) {
-  .frame { height: 1300px; }
+  .main-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .frame {
+    height: 80vh;
+  }
 }
