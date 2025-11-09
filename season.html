@@ -1,26 +1,87 @@
-.main-nav {
-  display: flex;
-  justify-content: center;   /* centers horizontally */
-  align-items: center;       /* centers vertically */
-  background-color: #121212;
-  padding: 1rem;
-  font-size: 1.1rem;
-  border-bottom: 1px solid #222;
-  gap: 0.5rem;               /* adds even space between items */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🏆 Season Summary — Kayak Tourney Stats</title>
+  <base href="https://joshgoforth2011.github.io/kayak-tourney-stats/">
+  <link rel="stylesheet" href="./site.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b0f14;
+      color: #fff;
+      font-family: "Segoe UI", Roboto, sans-serif;
+    }
 
-.main-nav a {
-  color: #8ab4f8;
-  text-decoration: none;
-}
+    /* 🌊 Navigation */
+    .main-nav {
+      display: flex;
+      justify-content: center;   /* centers horizontally */
+      align-items: center;       /* centers vertically */
+      background-color: #121212;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #222;
+      gap: 1rem;                 /* even spacing between links */
+    }
 
-.main-nav a:hover {
-  color: #cdd9e5;
-}
+    .main-nav a {
+      color: #8ab4f8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-weight: 500;
+    }
 
-.main-nav .active {
-  color: #fff;
-  font-weight: bold;
-}
+    .main-nav a:hover {
+      color: #cdd9e5;
+    }
 
+    .main-nav .active {
+      color: #fff;
+      font-weight: 600;
+    }
 
+    /* 🧱 Card and Frame */
+    .card {
+      background: #1e1e1e;
+      margin: 2rem auto;
+      max-width: 95%;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    }
+
+    iframe.frame {
+      border: none;
+      width: 100%;
+      height: 85vh;
+      display: block;
+      background: #0b0f14;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🌊 Top Navigation -->
+  <nav class="main-nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="events.html">🏁 Event Overviews</a>
+    <a href="angler.html">👤 Angler Profiles</a>
+    <a href="season.html" class="active">🏆 Season Totals</a>
+  </nav>
+
+  <!-- 📊 Embedded Season Summary Dashboard -->
+  <main>
+    <div class="card">
+      <iframe
+        class="frame"
+        src="https://lookerstudio.google.com/embed/reporting/97cb0e9d-e998-44b6-9a03-a9567941ebc0/page/p_2ra0stgixd?rm=minimal&nav=hidden"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
+</body>
+</html>
