@@ -1,68 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kayak Tourney Stats</title>
-  <link rel="stylesheet" href="site.css">
-  <style>
-    /* Quick inline fallback for nav if site.css not loaded */
-    body {
-      margin: 0;
-      background-color: #0b0f14;
-      color: #fff;
-      font-family: "Segoe UI", Roboto, sans-serif;
-    }
-
-    .main-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.75rem;
-      background-color: #111;
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      border-bottom: 1px solid #222;
-    }
-
-    .main-nav a {
-      color: #6ca8ff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .main-nav a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    iframe {
-      border: none;
-      width: 100%;
-      height: 900px;
-      display: block;
-      background: #0b0f14;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🏠 Kayak Tourney Stats — Home</title>
+  <base href="https://joshgoforth2011.github.io/kayak-tourney-stats/">
+  <link rel="stylesheet" href="./site.css" />
 </head>
-<link rel="stylesheet" href="./site.css" />
 
 <body>
-  <!-- 🌊 Top Navigation -->
+  <!-- 🌊 Unified Navigation -->
   <nav class="main-nav">
-    <a href="index.html">🏠 Home</a> |
-    <a href="events.html">🏁 Event Overviews</a> |
-    <a href="angler.html">👤 Angler Profiles</a> |
+    <a href="index.html" class="active">🏠 Home</a>
+    <a href="events.html">🏁 Event Overviews</a>
+    <a href="angler.html">👤 Angler Profiles</a>
     <a href="season.html">🏆 Season Totals</a>
   </nav>
 
-  <!-- 📊 Embed your Looker dashboard -->
-  <iframe
-    src="https://lookerstudio.google.com/embed/reporting/d7284d78-a437-42ac-8153-dd748d43d180/page/p_2ra0stgixd?rm=minimal"
-    allowfullscreen
-    loading="lazy">
-  </iframe>
+  <!-- 🎣 Landing Section -->
+  <main>
+    <div class="card" style="text-align:center;">
+      <h1>🎣 Kayak Tourney Stats Dashboard</h1>
+      <p>
+        Welcome to the analytics hub for kayak fishing tournaments.
+        Explore detailed metrics, track angler performance, and review season results across events.
+      </p>
+
+      <div style="margin-top:2rem; display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;">
+        <a href="events.html" class="button">🏁 View Event Overviews</a>
+        <a href="angler.html" class="button">👤 Explore Angler Profiles</a>
+        <a href="season.html" class="button">🏆 See Season Totals</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
-
